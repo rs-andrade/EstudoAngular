@@ -1,3 +1,9 @@
+<button (click)="blueClass = !blueClass"
+[ngClass]="{ blue: blueClass}"
+[ngStyle]="{ 'font-size.px': fontSize }">Change</button>
+
+<hr>
+
 <input (keyup)="changeImage($event)" [value]="imgURL">
 
 <app-post [img]="imgURL" (imgSelected)="logImg($event)">
@@ -19,3 +25,5 @@
 <p> {{ cost | currency: 'BRL' }}</p>
 
 <p> {{ temperature | number: '1.0-1' }}</p>
+
+<pre> {{ pizza | json}}</pre>
