@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'basics';
   name = 'rodrigo andrade;'
   imgURL = 'https://avatars.githubusercontent.com/u/13204228?s=48&v=4';
+  currentDate = new Date()
+  cost = 2000
+  temperature = 25.3
 
   getName(){
     return this.name;
