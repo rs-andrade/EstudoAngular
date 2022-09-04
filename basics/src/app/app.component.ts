@@ -9,6 +9,11 @@ export class AppComponent {
   title = 'basics';
   name = 'rodrigo andrade;'
   imgURL = 'https://avatars.githubusercontent.com/u/13204228?s=48&v=4';
+  images = [
+    'https://picsum.photos/200/300',
+    'https://picsum.photos/300/300',
+    'https://picsum.photos/400/300'
+  ]
   currentDate = new Date()
   cost = 2000
   temperature = 25.3
