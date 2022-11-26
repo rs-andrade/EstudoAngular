@@ -16,4 +16,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showAlert = false
+  alertMsg = 'Please wait! Your Account is being created.'
+  alertColor = 'blue'
+
+  login(){
+    this.showAlert=true
+    this.alertMsg = 'Please wait! Your are in logging.'
+    this.alertColor = 'blue'
+    console.log(this.credentials)
+  }
+
 }
