@@ -1,13 +1,16 @@
 import {Observable} from 'rxjs';
 
 const observable = new Observable( (subscriber) => {
-    subscriber.next('Hello Rodrigo')
-    subscriber.error('Error Rodrigo !!!')
-    subscriber.next('Hello for second')
+    const id = setInterval(() => {
+        subscriber.next('test')
+    }, 1000)
 
-    subscriber.complete()
-    subscriber.next('Hello for third')
+    return () => {
+        clearInterval(id)
+    }
 })
+
+console.log('before')
 
 observable.subscribe({
     next: (value) => {
@@ -20,3 +23,5 @@ observable.subscribe({
         console.error(err)
     }
 })
+
+console.log('after')
