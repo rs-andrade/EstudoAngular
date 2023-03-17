@@ -1,7 +1,7 @@
 import {Observable} from 'rxjs';
 
 const observable = new Observable( (subscriber) => {
-    subscriber.next()
+    subscriber.next('Hello Rodrigo')
 })
 
 observable.subscribe({
